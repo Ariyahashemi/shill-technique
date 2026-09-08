@@ -115,4 +115,9 @@ function exportData(){let a=document.createElement('a');a.href='data:application
 function ask(){let q=document.getElementById('q').value.trim();if(!q)return;document.querySelector('.chat').innerHTML+='<div class="bubble">'+esc(q)+'</div><div class="bubble ai">پیشنهاد Shill AI: برای این درخواست یک پاسخ حرفه‌ای و قابل استفاده برای مشتری یا محتوا آماده می‌کنیم. در نسخه متصل، این پاسخ با اطلاعات واقعی محصولات و داده‌های پیج تولید خواهد شد.</div>';document.getElementById('q').value=''}
 render();
 </script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}
+</script>
 </body></html>
