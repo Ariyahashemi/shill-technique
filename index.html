@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shill Technique — Command Center</title>
+<meta name="theme-color" content="#070b14"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.json">
+<style>
+:root{--bg:#070b14;--panel:#101827;--panel2:#141f31;--line:#233049;--txt:#eef4ff;--muted:#8c9ab6;--green:#31e6a4;--blue:#5b9cff;--red:#ff6b7a;--gold:#ffd166}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#172d3c 0,transparent 32%),var(--bg);color:var(--txt);font-family:Tahoma,Arial,sans-serif}.app{display:flex;min-height:100vh}.side{width:260px;background:rgba(12,19,33,.94);border-left:1px solid var(--line);padding:22px 15px;position:sticky;top:0;height:100vh}.brand{font-size:21px;font-weight:900;padding:8px 10px 25px}.brand b{color:var(--green)}.profile{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:12px;margin-bottom:16px}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--blue));color:#061018;font-weight:900;float:right;margin-left:10px}.profile small{color:var(--muted)}.nav button{width:100%;border:0;background:transparent;color:#aab6cf;padding:12px 13px;border-radius:11px;text-align:right;font-size:13px;margin:3px 0;cursor:pointer}.nav button:hover,.nav button.active{background:#1a2941;color:#fff}.main{flex:1;padding:28px;max-width:1500px;margin:auto;width:100%}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:22px}.title h1{margin:0 0 7px;font-size:25px}.muted{color:var(--muted);font-size:12px}.status{background:#10352d;color:var(--green);border:1px solid #1d5d4e;border-radius:20px;padding:8px 12px;font-size:12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.box{background:rgba(16,24,39,.92);border:1px solid var(--line);border-radius:17px;padding:18px}.num{font-size:28px;font-weight:900;margin:9px 0}.up{color:var(--green);font-size:12px}.two{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:14px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.box h3{margin:0 0 15px}.item{padding:13px 0;border-bottom:1px solid #202c42}.item:last-child{border:0}.progress{height:9px;background:#202b40;border-radius:9px;overflow:hidden;margin:10px 0}.bar{height:100%;background:linear-gradient(90deg,var(--blue),var(--green));width:68%}.btn{border:0;border-radius:10px;padding:10px 15px;background:var(--green);color:#06130f;font-weight:900;cursor:pointer}.btn.dark{background:#202d46;color:white}.btn.red{background:#54202a;color:#ffb8c0}.actions{display:flex;gap:8px;flex-wrap:wrap}.tag{display:inline-block;background:#1c2940;border:1px solid #2a3a57;color:#bdc9df;border-radius:20px;padding:5px 9px;font-size:11px;margin:3px}.hidden{display:none}.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:right;padding:12px;border-bottom:1px solid #202c42;font-size:12px}.good{color:var(--green)}.warn{color:var(--gold)}.danger{color:var(--red)}.ai{border:1px solid #315273;background:linear-gradient(135deg,#122337,#10231f)}.chat{background:#0b1321;border:1px solid var(--line);border-radius:13px;padding:14px;min-height:160px}.bubble{padding:10px 12px;background:#17253a;border-radius:12px;margin:7px 0;font-size:13px}.bubble.ai{background:#12332c}.input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b1321;color:white;margin-top:10px}@media(max-width:950px){.side{width:205px}.grid{grid-template-columns:repeat(2,1fr)}.two,.three{grid-template-columns:1fr}}@media(max-width:650px){.app{display:block}.side{position:static;width:100%;height:auto;padding:12px}.brand{padding-bottom:10px}.profile{display:none}.nav{display:flex;overflow:auto}.nav button{min-width:112px;text-align:center}.main{padding:14px}.grid{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start}.title h1{font-size:20px}.three{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand">SHILL <b>TECHNIQUE</b></div>
+<div class="profile"><div class="avatar">ST</div><b>shill_techniquee</b><br><small>مرکز فرمان هوشمند</small><div style="clear:both"></div></div>
+<div class="nav">
+<button class="active" onclick="show('home',this)">⌂ اتاق فرمان</button>
+<button onclick="show('ai',this)">✦ Shill AI</button>
+<button onclick="show('growth',this)">↗ Growth AI</button>
+<button onclick="show('content',this)">◈ استودیو محتوا</button>
+<button onclick="show('inbox',this)">✉ صندوق پیام</button>
+<button onclick="show('crm',this)">♙ مشتریان</button>
+<button onclick="show('sales',this)">▣ فروش</button>
+<button onclick="show('analytics',this)">◉ تحلیل و آمار</button>
+<button onclick="show('products',this)">🛒 محصولات و قیمت‌ها</button>
+<button onclick="show('services',this)">🛠 خدمات</button>
+<button onclick="show('admin',this)">👑 پنل مدیریت</button>
+</div>
+</aside>
+
+<main class="main">
+<section id="home">
+<div class="top"><div class="title"><h1>اتاق فرمان شیل تکنیک 🚀</h1><span class="muted">نسخه 2.0 — مرکز مدیریت، فروش و رشد</span></div><span class="status">● سیستم آماده</span></div>
+<div class="grid">
+<div class="card"><span class="muted">فالوورها</span><div class="num">—</div><span class="muted">اتصال رسمی اینستاگرام لازم است</span></div>
+<div class="card"><span class="muted">تعامل امروز</span><div class="num">—</div><span class="up">قابل اتصال به آمار زنده</span></div>
+<div class="card"><span class="muted">مشتری بالقوه</span><div class="num">24</div><span class="up">+6 امروز</span></div>
+<div class="card"><span class="muted">هدف رشد ماه</span><div class="num">+30K</div><span class="up">برنامه‌ریزی شده</span></div>
+</div>
+<div class="two">
+<div class="box ai"><h3>🧠 گزارش هوشمند امروز</h3>
+<div class="item"><b>اولویت ۱:</b> یک ریلز ۱۵ ثانیه‌ای درباره پدل‌ویل منتشر کن.</div>
+<div class="item"><b>اولویت ۲:</b> ۷ دایرکت با نیت خرید پیگیری شود.</div>
+<div class="item"><b>اولویت ۳:</b> استوری پشت‌صحنه تولید درام‌فیلتر منتشر شود.</div>
+<div class="actions"><button class="btn" onclick="toast('برنامه امروز ساخته شد')">اجرای برنامه امروز</button><button class="btn dark" onclick="show('ai',document.querySelectorAll('.nav button')[1])">از Shill AI بپرس</button></div>
+</div>
+<div class="box"><h3>🎯 هدف رشد</h3><div class="muted">هدف روزانه</div><div class="num">۱۰۰۰</div><div class="muted">فالوور هدف‌گذاری‌شده</div><div class="progress"><div class="bar"></div></div><span class="muted">پیشرفت نمونه: ۶۸٪</span><br><br><button class="btn dark" onclick="show('growth',document.querySelectorAll('.nav button')[2])">باز کردن Growth AI</button></div>
+</div>
+<div class="three">
+<div class="box"><h3>🔥 محتوای برتر</h3><div class="item">پدل‌ویل — آموزش کوتاه <span class="tag">ریلز</span></div><div class="item">درام‌فیلتر — پشت صحنه <span class="tag">استوری</span></div></div>
+<div class="box"><h3>💬 صندوق فوری</h3><div class="item">۳ پیام با نیت خرید <span class="danger">مهم</span></div><div class="item">۱۲ کامنت جدید <span class="good">عادی</span></div></div>
+<div class="box"><h3>💰 فروش</h3><div class="item">۶ سرنخ جدید</div><div class="item">۲ سفارش در پیگیری</div></div>
+</div>
+</section>
+
+<section id="ai" class="hidden"><div class="top"><div class="title"><h1>✦ Shill AI</h1><span class="muted">دستیار هوشمند اختصاصی کسب‌وکار</span></div></div>
+<div class="box ai"><h3>با Shill AI صحبت کن</h3><div class="chat"><div class="bubble ai">سلام! من دستیار شیل تکنیک هستم. درباره محتوا، فروش، محصولات یا رشد پیج از من بپرس.</div><div class="bubble">پیشنهاد: برای امروز ریلز «۳ اشتباه در هوادهی استخر ماهی» بساز.</div></div><input class="input" id="q" placeholder="مثلاً برای پدل‌ویل یک سناریوی ریلز بده..." onkeydown="if(event.key==='Enter')ask()"><br><br><button class="btn" onclick="ask()">تولید پاسخ</button></div></section>
+
+<section id="growth" class="hidden"><div class="top"><div class="title"><h1>↗ Growth AI</h1><span class="muted">موتور رشد مبتنی بر محتوای واقعی و تعامل سالم</span></div><button class="btn" onclick="toast('برنامه رشد ۷ روزه ساخته شد')">ساخت برنامه ۷ روزه</button></div>
+<div class="grid"><div class="card"><span class="muted">هدف روزانه</span><div class="num">۱۰۰۰</div><span class="muted">فالوور هدف</span></div><div class="card"><span class="muted">ایده ریلز</span><div class="num">14</div><span class="up">آماده تولید</span></div><div class="card"><span class="muted">فرصت تعامل</span><div class="num">31</div><span class="up">امروز</span></div><div class="card"><span class="muted">ریسک اسپم</span><div class="num good">پایین</div><span class="muted">تعامل کنترل‌شده</span></div></div>
+<div class="two"><div class="box"><h3>برنامه رشد امروز</h3><div class="item">۱. انتشار ریلز آموزشی پدل‌ویل</div><div class="item">۲. استوری نظرسنجی درباره تجهیزات مزرعه</div><div class="item">۳. پاسخ به کامنت‌های مرتبط</div><div class="item">۴. پیگیری مشتریان گرم</div></div><div class="box"><h3>هشدار مهم</h3><p class="muted">هیچ سیستم سالمی نمی‌تواند رشد ۱۰۰۰ فالوور واقعی در روز را تضمین کند. این پنل هدف را اندازه‌گیری و برای رسیدن به آن با روش‌های کم‌ریسک برنامه‌ریزی می‌کند.</p></div></div></section>
+
+<section id="content" class="hidden"><div class="top"><div class="title"><h1>◈ استودیو محتوا</h1></div><button class="btn" onclick="toast('تقویم ۳۰ روزه نمونه ساخته شد')">تقویم ۳۰ روزه</button></div><div class="three"><div class="box"><h3>🎬 ریلز</h3><div class="item">۳ دلیل استفاده از پدل‌ویل</div><div class="item">درام‌فیلتر چیست؟</div><button class="btn" onclick="toast('سناریو آماده شد')">ساخت سناریو</button></div><div class="box"><h3>📝 کپشن</h3><div class="item">تولید مستقیم بدون واسطه</div><div class="item">مشاوره تخصصی آبزی‌پروری</div><button class="btn" onclick="toast('کپشن نمونه ساخته شد')">تولید کپشن</button></div><div class="box"><h3>📅 تقویم</h3><div class="item">شنبه: ریلز آموزشی</div><div class="item">یکشنبه: استوری فروش</div><div class="item">دوشنبه: پشت صحنه</div></div></div></section>
+
+<section id="inbox" class="hidden"><div class="top"><div class="title"><h1>✉ صندوق هوشمند</h1></div><span class="status">پاسخ خودکار: آماده</span></div><div class="box"><table class="table"><tr><th>مخاطب</th><th>موضوع</th><th>اولویت</th><th>پیشنهاد</th></tr><tr><td>مشتری جدید</td><td>قیمت پدل‌ویل</td><td class="danger">بالا</td><td>ارسال مشخصات + درخواست ظرفیت مزرعه</td></tr><tr><td>مزرعه‌دار</td><td>درام‌فیلتر</td><td class="warn">متوسط</td><td>پرسش دبی آب</td></tr><tr><td>مخاطب</td><td>استعلام غذاده</td><td class="good">عادی</td><td>ارسال کاتالوگ</td></tr></table></div></section>
+
+<section id="crm" class="hidden"><div class="top"><div class="title"><h1>♙ CRM مشتریان</h1></div><button class="btn" onclick="toast('فرم مشتری جدید آماده شد')">+ مشتری جدید</button></div><div class="box"><div class="item"><b>مشتری A</b> — پدل‌ویل — <span class="tag">پیگیری امروز</span></div><div class="item"><b>مشتری B</b> — درام‌فیلتر — <span class="tag">پیش‌فاکتور</span></div><div class="item"><b>مشتری C</b> — غذاده — <span class="tag">مشتری گرم</span></div></div></section>
+
+<section id="sales" class="hidden"><div class="top"><div class="title"><h1>▣ فروش</h1></div></div><div class="grid"><div class="card"><span class="muted">سرنخ این ماه</span><div class="num">86</div></div><div class="card"><span class="muted">پیش‌فاکتور</span><div class="num">21</div></div><div class="card"><span class="muted">سفارش</span><div class="num">9</div></div><div class="card"><span class="muted">نرخ تبدیل</span><div class="num">10.4%</div></div></div></section>
+
+<section id="analytics" class="hidden"><div class="top"><div class="title"><h1>◉ تحلیل و آمار</h1></div></div><div class="box"><h3>مسیر محتوا تا فروش</h3><div class="item">بازدید محتوا → تعامل → فالوور جدید → دایرکت → سرنخ → سفارش</div><div class="progress"><div class="bar" style="width:74%"></div></div><p class="muted">اعداد این صفحه نمونه هستند و پس از اتصال رسمی، از داده‌های واقعی اینستاگرام و فروش استفاده می‌شوند.</p></div></section>
+
+<section id="products" class="hidden"><div class="top"><div class="title"><h1>🛒 محصولات و قیمت‌ها</h1><span class="muted">کاتالوگ قابل مدیریت شیل تکنیک</span></div><button class="btn" onclick="show('admin',document.querySelectorAll('.nav button')[10])">⚙ مدیریت محصولات</button></div><div id="productGrid" class="three"></div></section>
+
+<section id="services" class="hidden"><div class="top"><div class="title"><h1>🛠 خدمات</h1><span class="muted">خدمات تخصصی و سفارشی</span></div><button class="btn" onclick="show('admin',document.querySelectorAll('.nav button')[10])">⚙ مدیریت خدمات</button></div><div id="serviceGrid" class="three"></div></section>
+
+<section id="admin" class="hidden"><div class="top"><div class="title"><h1>👑 پنل مدیریت</h1><span class="muted">مدیریت محصولات، قیمت‌ها، خدمات و اطلاعات برنامه</span></div><span class="status">محلی و قابل ذخیره</span></div><div id="loginBox" class="box"><h3>ورود مدیر</h3><p class="muted">برای مدیریت اطلاعات رمز مدیر را وارد کنید.</p><input class="input" id="adminPass" type="password" placeholder="رمز مدیر"><br><br><button class="btn" onclick="adminLogin()">ورود به پنل</button><p class="muted" style="margin-top:12px">رمز اولیه: <b>1234</b> — بعد از ورود می‌توانید آن را تغییر دهید.</p></div><div id="adminPanel" class="hidden"><div class="three"><div class="box"><h3>➕ محصول جدید</h3><input class="input" id="pName" placeholder="نام محصول"><input class="input" id="pPrice" placeholder="قیمت (تومان)"><input class="input" id="pCat" placeholder="دسته‌بندی"><input class="input" id="pDesc" placeholder="توضیحات"><br><br><button class="btn" onclick="addProduct()">افزودن محصول</button></div><div class="box"><h3>➕ خدمت جدید</h3><input class="input" id="sName" placeholder="نام خدمت"><input class="input" id="sPrice" placeholder="قیمت / استعلام"><input class="input" id="sDesc" placeholder="توضیحات"><br><br><button class="btn" onclick="addService()">افزودن خدمت</button></div><div class="box"><h3>🔐 امنیت</h3><input class="input" id="newPass" type="password" placeholder="رمز جدید"><br><br><button class="btn dark" onclick="changePass()">تغییر رمز مدیر</button><p class="muted">اطلاعات در حافظه دستگاه ذخیره می‌شود.</p></div></div><div class="box" style="margin-top:14px"><h3>📦 مدیریت محصولات</h3><div id="adminProducts"></div></div><div class="box" style="margin-top:14px"><h3>🛠 مدیریت خدمات</h3><div id="adminServices"></div></div><div class="box" style="margin-top:14px"><h3>⚠️ مدیریت اطلاعات</h3><div class="actions"><button class="btn dark" onclick="exportData()">خروجی پشتیبان</button><button class="btn red" onclick="resetData()">بازگردانی اطلاعات اولیه</button></div></div></div></section>
+</main></div>
+<script>
+const defaults={products:[
+{name:'پدل‌ویل',price:'استعلام قیمت',cat:'آبزی‌پروری',desc:'تجهیز هوادهی و گردش آب استخر.'},
+{name:'اسپلش',price:'استعلام قیمت',cat:'هوادهی',desc:'راهکار هوادهی و افزایش اختلاط آب.'},
+{name:'ایرجت',price:'استعلام قیمت',cat:'هوادهی',desc:'سیستم هوادهی برای کاربردهای آبزی‌پروری.'},
+{name:'درام فیلتر',price:'استعلام قیمت',cat:'فیلتراسیون',desc:'فیلتراسیون مکانیکی برای سیستم‌های آبزی‌پروری.'},
+{name:'غذاده',price:'استعلام قیمت',cat:'تجهیزات',desc:'تجهیزات تغذیه و مدیریت خوراک.'},
+{name:'تجهیزات و متعلقات',price:'استعلام قیمت',cat:'تجهیزات',desc:'ساچوک، سوپرفورس، سوپرونچوری، فورس و ونچوری.'},
+{name:'ساخت سفارشی',price:'استعلام قیمت',cat:'ساخت',desc:'طراحی و ساخت تجهیزات متناسب با نیاز مزرعه.'}],
+services:[
+{name:'خدمات تراشکاری',price:'استعلام قیمت',desc:'انجام خدمات تراشکاری و ساخت قطعات.'},
+{name:'CNC',price:'استعلام قیمت',desc:'ماشین‌کاری دقیق قطعات و سفارش‌های صنعتی.'},
+{name:'جوشکاری صنعتی',price:'استعلام قیمت',desc:'جوشکاری و مونتاژ تجهیزات صنعتی.'},
+{name:'ساخت دستگاه سفارشی',price:'استعلام قیمت',desc:'طراحی و ساخت دستگاه متناسب با نیاز مشتری.'},
+{name:'مشاوره فنی آبزی‌پروری',price:'استعلام قیمت',desc:'مشاوره تخصصی برای انتخاب و چیدمان تجهیزات.'},
+{name:'تأمین تجهیزات و خوراک',price:'استعلام قیمت',desc:'تأمین تجهیزات و خوراک مورد نیاز مزرعه.'}]};
+let data=JSON.parse(localStorage.getItem('shillData')||'null')||defaults;
+let pass=localStorage.getItem('shillAdminPass')||'1234';
+function save(){localStorage.setItem('shillData',JSON.stringify(data));render();}
+function esc(x){return String(x).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+function show(id,el){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');window.scrollTo(0,0);if(id==='admin'&&!document.getElementById('adminPanel').classList.contains('hidden'))renderAdmin();}
+function toast(t){alert(t)}
+function render(){document.getElementById('productGrid').innerHTML=data.products.map((p,i)=>`<div class="box"><h3>${esc(p.name)}</h3><span class="tag">${esc(p.cat)}</span><p class="muted">${esc(p.desc)}</p><div class="num" style="font-size:19px">${esc(p.price)}</div><button class="btn dark" onclick="editProduct(${i})">ویرایش</button></div>`).join('');document.getElementById('serviceGrid').innerHTML=data.services.map((x,i)=>`<div class="box"><h3>${esc(x.name)}</h3><p class="muted">${esc(x.desc)}</p><div class="num" style="font-size:19px">${esc(x.price)}</div><button class="btn dark" onclick="editService(${i})">ویرایش</button></div>`).join('');renderAdmin();}
+function adminLogin(){if(document.getElementById('adminPass').value===pass){document.getElementById('loginBox').classList.add('hidden');document.getElementById('adminPanel').classList.remove('hidden');renderAdmin();}else alert('رمز مدیر اشتباه است.');}
+function renderAdmin(){let ap=document.getElementById('adminProducts'),as=document.getElementById('adminServices');if(!ap||!as)return;ap.innerHTML=data.products.map((p,i)=>`<div class="item"><b>${esc(p.name)}</b> — ${esc(p.price)} <span class="tag">${esc(p.cat)}</span><div class="actions" style="margin-top:7px"><button class="btn dark" onclick="editProduct(${i})">✏️ ویرایش</button><button class="btn red" onclick="delProduct(${i})">🗑 حذف</button></div></div>`).join('');as.innerHTML=data.services.map((x,i)=>`<div class="item"><b>${esc(x.name)}</b> — ${esc(x.price)}<div class="actions" style="margin-top:7px"><button class="btn dark" onclick="editService(${i})">✏️ ویرایش</button><button class="btn red" onclick="delService(${i})">🗑 حذف</button></div></div>`).join('');}
+function addProduct(){let n=pName.value.trim();if(!n)return alert('نام محصول را وارد کنید.');data.products.push({name:n,price:pPrice.value.trim()||'استعلام قیمت',cat:pCat.value.trim()||'تجهیزات',desc:pDesc.value.trim()||'توضیحات محصول را تکمیل کنید.'});['pName','pPrice','pCat','pDesc'].forEach(id=>document.getElementById(id).value='');save();toast('محصول اضافه شد.');}
+function addService(){let n=sName.value.trim();if(!n)return alert('نام خدمت را وارد کنید.');data.services.push({name:n,price:sPrice.value.trim()||'استعلام قیمت',desc:sDesc.value.trim()||'توضیحات خدمت را تکمیل کنید.'});['sName','sPrice','sDesc'].forEach(id=>document.getElementById(id).value='');save();toast('خدمت اضافه شد.');}
+function editProduct(i){let p=data.products[i];let n=prompt('نام محصول:',p.name);if(n===null)return;let pr=prompt('قیمت:',p.price);if(pr===null)return;let c=prompt('دسته‌بندی:',p.cat);if(c===null)return;let d=prompt('توضیحات:',p.desc);if(d===null)return;data.products[i]={name:n,price:pr,cat:c,desc:d};save();}
+function editService(i){let x=data.services[i];let n=prompt('نام خدمت:',x.name);if(n===null)return;let pr=prompt('قیمت / استعلام:',x.price);if(pr===null)return;let d=prompt('توضیحات:',x.desc);if(d===null)return;data.services[i]={name:n,price:pr,desc:d};save();}
+function delProduct(i){if(confirm('این محصول حذف شود؟')){data.products.splice(i,1);save();}}
+function delService(i){if(confirm('این خدمت حذف شود؟')){data.services.splice(i,1);save();}}
+function changePass(){let n=document.getElementById('newPass').value;if(n.length<4)return alert('رمز باید حداقل ۴ کاراکتر باشد.');pass=n;localStorage.setItem('shillAdminPass',pass);document.getElementById('newPass').value='';toast('رمز مدیر تغییر کرد.');}
+function resetData(){if(confirm('همه تغییرات محلی پاک و اطلاعات اولیه برگردانده شود؟')){data=JSON.parse(JSON.stringify(defaults));save();}}
+function exportData(){let a=document.createElement('a');a.href='data:application/json;charset=utf-8,'+encodeURIComponent(JSON.stringify(data,null,2));a.download='shill-technique-backup.json';a.click();}
+function ask(){let q=document.getElementById('q').value.trim();if(!q)return;document.querySelector('.chat').innerHTML+='<div class="bubble">'+esc(q)+'</div><div class="bubble ai">پیشنهاد Shill AI: برای این درخواست یک پاسخ حرفه‌ای و قابل استفاده برای مشتری یا محتوا آماده می‌کنیم. در نسخه متصل، این پاسخ با اطلاعات واقعی محصولات و داده‌های پیج تولید خواهد شد.</div>';document.getElementById('q').value=''}
+render();
+</script>
+</body></html>
